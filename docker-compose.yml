@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  socialmedia:
+    build: .
+    image: socialmedia:latest
+    volumes:
+      - .:/application
+    ports:
+      - 8000:8000
+    container_name: socialmedia_container
+    command: python manage.py runserver 0.0.0.0:8000

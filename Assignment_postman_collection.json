@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "6660fb61-5fcf-41e3-8d06-71bc0fc67bf6",
+		"name": "Assignment-R",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24715868",
+		"_collection_link": "https://galactic-flare-299883.postman.co/workspace/Personal~807112e8-1b2f-4fee-96ec-0f3b2a561961/collection/24715868-6660fb61-5fcf-41e3-8d06-71bc0fc67bf6?action=share&source=collection_link&creator=24715868"
+	},
+	"item": [
+		{
+			"name": "TokenGenerate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"idonaavram6573@example.com\",\n    \"password\":\"test@1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/jwt/create-token",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"jwt",
+						"create-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token Refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNjI0NzA4MCwiaWF0IjoxNzI2MTYwNjgwLCJqdGkiOiI4OGVmZjM3NzI3NmI0ZjVkYmE4MTZjNTBiNzE4ZGNkNCIsInVzZXJfaWQiOjE3fQ.kE9aei5h9VjMrSVUqehn0XCH8qglfPDm8izNAy6RISM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/jwt/refresh/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"jwt",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token Verify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTYxMTA0LCJpYXQiOjE3MjYxNjA2ODAsImp0aSI6IjFlMDc2OGIzNTA3ODQ2NmZiYWJkZTJiYjJkNzI0YmMyIiwidXNlcl9pZCI6MTd9.PavtuhtSTui2DmMGpxGRJmYo37WZSnEavDhiJ-bC7Zs\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/jwt/verify-token/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"jwt",
+						"verify-token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"test\",\n    \"last_name\": \"test\",\n    \"email\": \"test1@gmail.com\",\n    \"password\": \"test@12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/auth/user/create/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTYxMTA0LCJpYXQiOjE3MjYxNjA2ODAsImp0aSI6IjFlMDc2OGIzNTA3ODQ2NmZiYWJkZTJiYjJkNzI0YmMyIiwidXNlcl9pZCI6MTd9.PavtuhtSTui2DmMGpxGRJmYo37WZSnEavDhiJ-bC7Zs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/auth/user/all/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"user",
+						"all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTYxMTA0LCJpYXQiOjE3MjYxNjA2ODAsImp0aSI6IjFlMDc2OGIzNTA3ODQ2NmZiYWJkZTJiYjJkNzI0YmMyIiwidXNlcl9pZCI6MTd9.PavtuhtSTui2DmMGpxGRJmYo37WZSnEavDhiJ-bC7Zs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/auth/user/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Friend Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTYxODUzLCJpYXQiOjE3MjYxNjE1NTMsImp0aSI6IjZlMDI2MGNmMmJjODQwZGJiZjZmMTY0YWUxMjA5ZGM3IiwidXNlcl9pZCI6MX0.JOgvu9Qmw-U94dgsiDrKywqX3jnAh2qKWaSSYEnjetM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"recipient\": 10\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/auth/send-friend-request/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"send-friend-request",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Friends",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTYxNTEyLCJpYXQiOjE3MjYxNjA2ODAsImp0aSI6IjczMzAzMmJmMTkyYTRlNDZhNzBjNDczMGM2ZTg4ZDcxIiwidXNlcl9pZCI6MTd9.402TksCqn8K9Av_yGmWtpgQneD3_beISQX4maBlU64g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/auth/all-friends/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"all-friends",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sent Friend-Requests",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTYxODUzLCJpYXQiOjE3MjYxNjE1NTMsImp0aSI6IjZlMDI2MGNmMmJjODQwZGJiZjZmMTY0YWUxMjA5ZGM3IiwidXNlcl9pZCI6MX0.JOgvu9Qmw-U94dgsiDrKywqX3jnAh2qKWaSSYEnjetM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"test\",\n    \"last_name\": \"test\",\n    \"email\": \"test1@gmail.com\",\n    \"password\": \"test@12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/auth/all-sent/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"all-sent",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Received Friend-Requests",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTYxODUzLCJpYXQiOjE3MjYxNjE1NTMsImp0aSI6IjZlMDI2MGNmMmJjODQwZGJiZjZmMTY0YWUxMjA5ZGM3IiwidXNlcl9pZCI6MX0.JOgvu9Qmw-U94dgsiDrKywqX3jnAh2qKWaSSYEnjetM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/auth/all-received/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"all-received",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Handle Friend-Requests",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTYxODUzLCJpYXQiOjE3MjYxNjE1NTMsImp0aSI6IjZlMDI2MGNmMmJjODQwZGJiZjZmMTY0YWUxMjA5ZGM3IiwidXNlcl9pZCI6MX0.JOgvu9Qmw-U94dgsiDrKywqX3jnAh2qKWaSSYEnjetM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"action\":\"accepted\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/auth/handle-friend-requests/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"handle-friend-requests",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
